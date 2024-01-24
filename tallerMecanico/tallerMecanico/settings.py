@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            join(BASE_DIR, 'rayo')
+            join(BASE_DIR, 'templates/rayo')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
