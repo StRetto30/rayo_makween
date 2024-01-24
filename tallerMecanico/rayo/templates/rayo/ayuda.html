@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<style>
+    body {
+      background: #4CA1AF;
+      background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);
+      background: linear-gradient(to right, #C4E0E5, #4CA1AF);
+    }
+  
+    .borde {
+      border: solid 2px black;
+      text-align: center;
+      display: block;
+      width: 70%;
+      margin: 25px auto;
+      background-color: #C4E0E5;
+    }
+  
+  
+    body>section>article:nth-child(1) {
+      display: block;
+      text-align: center;
+      width: 30%;
+      border: solid 1px black;
+      margin: 15% auto;
+      background-color: whitesmoke;
+    }
+  
+    body>form {
+      display: block;
+      text-align: center;
+      width: 30%;
+      border: solid 1px black;
+      margin: 15% auto;
+      background-color: whitesmoke;
+    }
+  
+    section {
+      display: flex;
+      width: 600px;
+      height: 430px;
+    }
+  
+    section img {
+      width: 0px;
+      flex-grow: 1;
+      object-fit: cover;
+      opacity: .8;
+      transition: .5 ease;
+    }
+  
+    section img:hover {
+      cursor: crosshair;
+      width: 300px;
+      opacity: 1;
+      filter: contrast(120%);
+    }
+  
+    body {
+      background: #4CA1AF;
+      background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);
+      background: linear-gradient(to right, #C4E0E5, #4CA1AF);
+    }
+  
+    #descripcion {
+      resize: none;
+    }
+  
+    .centrado {
+      text-align: center;
+      vertical-align: middle;
+    }
+  
+    .borde {
+      border: solid 2px black;
+      text-align: center;
+      display: block;
+      width: 70%;
+      margin: 25px auto;
+      background-color: #C4E0E5;
+    }
+  
+    .log {
+      background-color: whitesmoke;
+      padding: 12px;
+    }
+  
+    .cont {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  
+    .container-form {
+      width: 100%;
+      max-width: 1100%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px;
+      margin-top: 90px;
+    }
+  
+    .container-form h2 {
+      margin-bottom: 15px;
+      font-size: 35px;
+    }
+  
+    .container-form p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+  
+    .container-form a {
+      font-size: 17px;
+      display: inline-block;
+      text-decoration: none;
+      width: 100;
+      margin-bottom: 15px;
+      color: black;
+      font-weight: 700;
+    }
+  
+    .container-form a i {
+      color: black;
+      margin-right: 10px;
+    }
+  
+    .container-form form .campo,
+    textarea {
+      width: 100%;
+      padding: 15px 10px;
+      font-size: 15px;
+      border: 1px solid #C4E0E5;
+      margin-bottom: 20px;
+      border-radius: 3px;
+      outline: 0px;
+      max-width: 530px;
+      min-width: 530px;
+    }
+  
+    .container-form form textarea {
+      max-width: 530px;
+      min-width: 530px;
+      min-height: 140px;
+      max-height: 150px;
+    }
+  
+    .container-form .btn-enviar {
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+      outline: 0px;
+      background: cornflowerblue;
+      color: whitesmoke;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 300ms ease;
+  
+    }
+  
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      width: 100%;
+      height: 100%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      letter-spacing: 0.03em;
+      line-height: 1.6;
+    }
+  
+    .title {
+      text-align: center;
+      font-size: 40px;
+      color: black;
+      margin-top: 100px;
+      font-weight: 100px;
+    }
+  
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      height: 430px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+    }
+  
+    .container .card {
+      width: 330px;
+      height: 430px;
+      border-radius: 8px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      margin: 20px;
+      text-align: center;
+      transition: all 0.25s;
+    }
+  
+    .container .card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    .container .card img {
+      width: 330px;
+      height: 220px;
+    }
+  
+    .container .card h4 {
+      font-weight: 600;
+    }
+  
+    .container .card p {
+      padding: 0 1rem;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  
+    .container .card a {
+      font-weight: 500;
+      text-decoration: none;
+      color: #3439db;
+    }
+  
+    #login-box {
+      position: relative;
+      margin: 5% auto;
+      width: 600px;
+      height: 400px;
+      background: #FFF;
+      border-radius: 2px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+  
+    .left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      padding: 40px;
+      width: 300px;
+      height: 400px;
+    }
+  
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-bottom: 2px solid #16a085;
+      color: #16a085;
+      transition: 0.2s ease;
+    }
+  
+    input[type="submit"]:active {
+      opacity: 1;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+      transition: 0.1s ease;
+    }
+  
+    #registro {
+      background-color: paleturquoise
+    }
+</style>
+  
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda</title>
+</head>
+
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/Style.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <img src="https://static.vecteezy.com/system/resources/previews/000/540/329/non_2x/lightning-bolt-icon-vector.jpg"
+                d-inline-block align-text-top nwidth="150" height="90">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                  <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+                  <a class="nav-link" href="./Servicios.html">Servicios</a>
+                  <a class="nav-link" href="./Contacto.html">Contacto</a>
+                  <a class="nav-link" href="./ayuda.html">Ayuda</a>
+                  <ul class="nav justify-content-end">
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </ul>
+                  <li class="nav dropdown position-absolute end-0">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Iniciar sesion
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./registro.html">Registate</a></li>
+                      <li><a class="dropdown-item" href="./inicio-sesion.html">Inicio sesión</a></li>
+                  </li>
+                  </ul>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          
+        <table class="recuadro">
+            <div class="container my-3 borde centro">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <h2>Escriba su mensaje</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="userInput" class="form-label">Correo electronico</label>
+                                <input type="email" class="form-control" id="userInput"
+                                    placeholder="correo@ejemplo.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcion" class="form-label">Mensaje al profesional</label>
+                                <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-secondary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </table>
+        <div class="container-fluid">
+            <div class="row p-5 bg-secondary text-white">
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                <p class="h3 m-3"> Rayo Makween </p>
+              </div>
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                <p class="h5">Servicios</p>
+                <div>
+                  <a class="text-white text-decoration-none" href="">Areglo de motor</a>
+                </div>
+                <div>
+                  <a class="text-white text-decoration-none" href="">Cajas de cammbio</a>
+                </div>        
+                <div>
+                  <a class="text-white text-decoration-none" href="">Cambio de inyectores</a>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                <p class="h5">
+                  Contacto
+                </p>
+                <p>
+                  +56912345678
+                  2296474332
+                  rayomakween@tallermecanico.cl
+                </p>
+              </div>
+        
+            </div>
+          </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
