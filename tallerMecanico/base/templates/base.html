@@ -308,7 +308,8 @@
               {% if user.is_authenticated %}
                             
                 Hola {{ user.username }} &nbsp;&nbsp;<div class="position-absolute end-0"><a href="{% url 'cerrar_sesion' %}" style="color: white;">Cerrar sesión</a>
-                <a class="nav-link" href="{% url 'formulario' %}">Atenciones</a></div>
+                <a class="nav-link" href="{% url 'formulario' %}">Atenciones</a>
+                <a class="nav-link" href="{% url 'formulariolist' %}">Resultados</a></div>
               {% else %}
               <div class="position-absolute end-0"><a href="{% url 'iniciosesion'%}" style="color: white;">Login</a> &nbsp; &nbsp; <a href="{% url 'registro'%}" style="color: white;">Regístrate</a></div>
               {% endif %}

@@ -1,7 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<h1>Atenciones</h1>
+<button type="button">
+    <a href="{% url 'formulario' %}">Agregar</a>
+</button>
+<table>
+    {% if Atencion %}
+        <th>titulo</th>
+        <th>diagnostico</th>
+        <th>fecha</th>
+        <th>aprobado</th>
+        <th>mecanico</th>
+        <th>categoria</th>
 
-
-
+        {% for x in Atencion %}
+            <tr>
+                <td>{{x.titulo}}</td>    
+                <td>{{x.diagnostico}}</td>
+                <td>{{x.fecha}}</td>
+                <td>{{x.aprobado}}</td>
+                <td>{{x.mecanico}}</td>
+                <td>{{x.categoria}}</td>
+            </tr>
+        {% endfor %}
+    {% endif %}  
+</table>
 {% endblock content %}

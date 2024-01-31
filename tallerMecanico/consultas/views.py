@@ -5,6 +5,13 @@ from .forms import ConsultaForm
 from django.contrib import messages
 
 # Create your views here.
+def formulariolist(request):
+    Atencion = Atencion.objects.all()
+    context = {'Atencion':Atencion}
+    return render(request, 'formulariolist.html', context)
+
+
+
 def formulario(request):
     if request.method == 'POST':
         form = ConsultaForm(request.POST)
@@ -16,12 +23,12 @@ def formulario(request):
                 
                 messages.success(request, 'La consulta se ha enviado correctamente. Nos pondremos en contacto contigo.')
 
-                return redirect('form-motor.html')  # Ajusta la redirección según tus necesidades
+                return redirect('formulario.html')  
             except Exception as e:
-                # Manejar cualquier error durante el procesamiento
+                
                 messages.error(request, f'Error al procesar la consulta: {str(e)}')
         else:
-            # Mensaje de error en el formulario
+       
             messages.error(request, 'Por favor, corrige los errores en el formulario.')
     else:
         form = ConsultaForm()

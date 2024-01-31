@@ -1,4 +1,6 @@
 from django import forms
+from .models import Atencion
+from django.forms import ModelForm
 
 class ConsultaForm(forms.Form):
     titulo = forms.CharField(max_length=255)
@@ -14,6 +16,9 @@ class ConsultaForm(forms.Form):
     modelo = forms.CharField(label='Modelo', max_length=100)
     año = forms.IntegerField(label='Año')
 
-
+class atencion(ModelForm):
+    class Meta:
+        model  = Atencion
+        fields = "__all__"
 
     
