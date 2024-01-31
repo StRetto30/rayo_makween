@@ -5,11 +5,10 @@ from .forms import ConsultaForm
 from django.contrib import messages
 
 # Create your views here.
-def formulariolist(request):
-    Atencion = Atencion.objects.all()
-    context = {'Atencion':Atencion}
-    return render(request, 'formulariolist.html', context)
 
+def formulariolist(request):
+    atencion = Atencion.objects.all()
+    return render(request, 'formulariolist.html', {'consultas': atencion})
 
 
 def formulario(request):
